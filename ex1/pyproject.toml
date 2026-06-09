@@ -1,14 +1,16 @@
 [tool.poetry]
-name = "matrix-analysis"
+name = "matrix_analysis"
 version = "1.0.0"
+package-mode = false
 description = "Matrix data analysis demo comparing pip and Poetry"
 authors = ["dioppolo"]
 
 [tool.poetry.dependencies]
-pandas = "^2.3.3"
-numpy = "^1.26.4"
-matplotlib = "^3.5.1"
-requests = "^2.34.2"
+python = "^3.10"
+pandas = "^2.2"
+numpy = "^1.26"
+matplotlib = "^3.8"
+requests = "^2.31"
 
 [build-system]
 requires = ["poetry-core>=1.5.0"]
