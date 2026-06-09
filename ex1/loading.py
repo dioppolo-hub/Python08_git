@@ -1,6 +1,7 @@
 import importlib
 import pandas as pd
 import numpy as np
+import matplotlib
 import matplotlib.pyplot as plt
 import requests
 
@@ -15,7 +16,7 @@ def main():
     packages = {
         "pandas": pd,
         "numpy": np,
-        "matplotlib": plt,
+        "matplotlib": matplotlib,
         "requests": requests
     }
     print("Checking dependencies:")
