@@ -12,24 +12,25 @@ try:
 except ModuleNotFoundError:
     DEPENDENCIES_AVAILABLE = False
 
+
 def check_dependency(name):
     spec = importlib.util.find_spec(name)
     return spec is not None
 
 
 def main():
-    print(
-        "=== INSTALLATION INSTRUCTIONS ===\n"
-        "Make a VE like ex0\n"
-        "(python3 -m venv venv)->(source venv/bin/activate)\n"
-        "PIP Installation:\n"
-        "1. 'pip install -r requirements.txt'\n"
-        "2. 'python3 loading.py'\n"
-        "POETRY Installation:\n"
-        "1. 'poetry install'\n"
-        "2. 'poetry run python loading.py'\n"
-    )
     if not DEPENDENCIES_AVAILABLE:
+        print(
+            "=== INSTALLATION INSTRUCTIONS ===\n"
+            "--PIP Installation:\n"
+            "1. Make a VE like ex0:\n"
+            "       (python3 -m venv venv)->(source venv/bin/activate)\n"
+            "2. 'pip install -r requirements.txt'\n"
+            "3. 'python3 loading.py'\n"
+            "--POETRY Installation:\n"
+            "1. 'poetry install'\n"
+            "2. 'poetry run python loading.py'\n"
+        )
         print("[INFO] Missing dependencies... please follow the instruction")
         sys.exit(0)
     print("\nLOADING STATUS...\n")
